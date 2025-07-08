@@ -35,7 +35,7 @@ export function PostSelection({ selectedPost, onPostSelect, isActive, onComplete
       const post: WorkflowPost = {
         id: type,
         type: type,
-        isPro: type !== 'specific'
+        isPro: type === 'any' || type === 'next'
       };
       onPostSelect(post);
       onComplete();

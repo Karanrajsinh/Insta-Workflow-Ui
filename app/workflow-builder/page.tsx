@@ -74,7 +74,7 @@ export default function WorkflowBuilder() {
     }
   };
 
-  const canGoLive = selectedPost && commentConfig.isValid && dmConfig.isValid;
+  const canGoLive = !!(selectedPost && commentConfig.isValid && dmConfig.isValid);
 
   const renderCurrentStep = () => {
     switch (currentStep) {
